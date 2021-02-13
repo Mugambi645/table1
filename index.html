@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>
+
+</title>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body bgcolor="gray">
+<div class="details">
+<a style="font-size:40px" href=" https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></i></a>
+<a style="font-size:40px" href="https://instagram.com" target="blank"><i class="fab fa-instagram"></i></a>
+<a style="font-size:40px" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+<h2>About weekdays..</h2>
+<p style="color:lime; font-size:20px";>More details...<br>Click to find out what <br>i'd be doing!</p>
+<input type="submit" onclick="findDay()" value="click to find day"> 
+<input type="button" onclick="currentDate()" value="Date">
+</div>
+ </div>
+
+<table bgcolor="green" border="1"  height="90%" align="left" width="70%">
+<caption style="text-align:left; font-size:30px";>Free time table<i style="font-size:30px" class="far fa-clock"</i></caption>
+<tr>
+<td onmouseover="myWeekend()" span id="demo" bgcolor="white">Day</td>
+<td>Friday</td>
+<td>Saturday</td>
+<td onmouseover="endWeekend()" span id="demo1" bgcolor="white">Sunday</td>
+</tr>
+<tr>
+<td>Morning</td>
+<td>Wake up</td>
+<td>Reading</td>
+<td>Church</td>
+</tr>
+<tr>
+<td>Afternoon</td>
+<td>Movie</td>
+<td>Weeding</td>
+<td>Bake</td>
+<tr>
+<td style="size:70">Evening</td>
+<td>Movie</td>
+<td>Music</td>
+<td>Dancing</td>
+</tr>
+</tr>
+</table>
+
+<style>
+.details {
+    float:right;
+    background-image: url(https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding:100px;
+}
+.date {
+    float:right;
+}
+</style>
+<script>
+function currentDate(){
+    let _date = new Date();
+    _date.setFullYear(2021,02,08)
+    document.write(_date);
+}
+function endWeekend(){
+    setTimeout(() => {
+    document.getElementById("demo1").innerHTML = "oops!<br>Weekend has <br> just ended";
+    }, 2000)
+}
+function myWeekend(){
+    document.getElementById("demo").innerHTML = "weekend begins <br>on friday!";
+}
+ function findDay() {
+    day = prompt("Enter a day: (Monday-Thursday)").toLowerCase();
+    if (day == "monday"){
+        alert("Study web design and development")
+    } /*else if (){
+        alert();
+
+    } */else if (day == "tuesday"){
+        alert("Study database design");
+
+    } else if (day == "wednesday"){
+        alert("Health awareness life skills");
+    }else if (day == "thursday"){
+        alert("Study system analysis and design");
+
+    } else {
+        alert("Please enter correct details")
+    }
+    }
+
+
+
+</script>
+</body>
+</html>
